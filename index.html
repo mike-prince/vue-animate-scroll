@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueAnimateScroll Demo</title>
+
+    <script src="https://unpkg.com/vue@2.5.16/dist/vue.min.js"></script>
+    <script src="lib/vue-animate-scroll.js"></script>
+
+    <style>
+        .animate {
+          transition-delay: .1s;
+          transition-duration: .3s;
+          transition-timing-function: ease-in;
+          margin-top: 105vh;
+          font-family: sans-serif;
+          font-size: 30px;
+        }
+
+        .slide-up {
+          transform: translateY(0);
+          text-align: center;
+        }
+
+        .slide-up.animate-active  {
+          transform: translateY(-50vh);
+        }
+
+        .slide-right {
+          transform: translateX(0);
+        }
+
+        .slide-right.animate-active  {
+          transform: translateX(200px);
+        }
+
+        .fade {
+            opacity: 0;
+        }
+
+        .fade.animate-active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-animate.repeat.fade="'slide-right'">Slide Right</div>
+        <div v-animate.repeat="'slide-up'">Slide Up</div>
+    </div>
+
+    <script>
+        Vue.use(VueAnimateScroll)
+        var app = new Vue({
+            el: '#app'
+        })
+    </script>
+</body>
+</html>

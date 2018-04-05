@@ -1,0 +1,27 @@
+{
+  "name": "vue-animate-scroll",
+  "version": "0.1.0",
+  "description": "A small Vue component that provides an easy way to animate elements as they scroll into view.",
+  "main": "./lib/vue-parallax-js.cjs.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "npm run clean && rollup -c rollup.config.js",
+    "dev": "rollup -c rollup.config.js -w",
+    "nuke": "rm -r lib node_modules yarn.lock"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeprince13/vue-animate-scroll.git"
+  },
+  "author": "Mike Prince",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikeprince13/vue-animate-scroll/issues"
+  },
+  "homepage": "https://github.com/mikeprince13/vue-animate-scroll#readme",
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-uglify": "^3.0.0",
+    "uglify-es": "^3.3.9"
+  }
+}
