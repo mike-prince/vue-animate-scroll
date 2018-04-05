@@ -13,6 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/mikeprince13/vue-animate-scroll.git"
   },
+  "keywords": [
+    "vue",
+    "vue animate",
+    "vue scroll",
+    "vue-component"
+  ],
   "author": "Mike Prince",
   "license": "MIT",
   "bugs": {
