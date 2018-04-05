@@ -5,6 +5,10 @@ export default {
   input: 'src/vue-animate-scroll.js',
   output: [
     {
+      file: 'lib/vue-animate-scroll.es.js',
+      format: 'es'
+    },
+    {
       file: 'lib/vue-animate-scroll.cjs.js',
       format: 'cjs'
     },
