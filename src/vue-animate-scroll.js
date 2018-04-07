@@ -35,7 +35,7 @@ export default {
 
     Vue.directive('animate', {
       bind(el, binding) {
-        el.className = os.animateClass || 'animate'
+        el.classList.add(os.animateClass || 'animate')
       },
       inserted(el, binding) {
         a.activate(el, binding)
