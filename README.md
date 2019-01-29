@@ -50,7 +50,7 @@ Vue.use(VueAnimate)
 ## Options
 
 ```vue
-Vue.use(VueAnimateScroll, options)
+Vue.use(VueAnimate, { animateClass: String, activeClass: String });
 ```
 
 ```javascript
