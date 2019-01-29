@@ -1,6 +1,6 @@
 {
   "name": "vue-animate-scroll",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A small Vue component that provides an easy way to animate elements as they scroll into view.",
   "main": "./lib/vue-animate-scroll.cjs.js",
   "module": "./lib/vue-animate-scroll.es.js",
