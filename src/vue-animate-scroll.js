@@ -1,17 +1,16 @@
-var Animate = function(os) {
-  this.os = os
-}
+class Animate {
+  constructor (os) {
+    this.os = os
+  }
 
-Animate.prototype = {
-
-  activate(el, binding) {
+  activate (el, binding) {
     const mod = binding.modifiers
     const value = binding.value
 
     const animateClass = this.os.animateClass || 'animate'
     const activeClass = this.os.activeClass || 'animate-active'
 
-    const {top,bottom} = el.getBoundingClientRect()
+    const { top, bottom } = el.getBoundingClientRect()
     const height = document.documentElement.clientHeight
     const inWindow = top < height && bottom > 0
 
@@ -30,16 +29,16 @@ Animate.prototype = {
 }
 
 export default {
-  install(Vue, os = {}) {
+  install (Vue, os = {}) {
     let a = new Animate(os)
 
     Vue.directive('animate', {
-      bind(el, binding) {
+      bind (el, binding) {
         el.classList.add(os.animateClass || 'animate')
       },
-      inserted(el, binding) {
+      inserted (el, binding) {
         a.activate(el, binding)
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
           a.activate(el, binding)
         })
       }
