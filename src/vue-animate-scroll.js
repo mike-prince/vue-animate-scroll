@@ -1,5 +1,8 @@
 class Animate {
-  constructor (os) {
+  constructor (os = {
+    animateClass: 'animate',
+    activeClass: 'animate-active'
+  }) {
     this.os = os
   }
 
@@ -7,8 +10,7 @@ class Animate {
     const mod = binding.modifiers
     const value = binding.value
 
-    const animateClass = this.os.animateClass || 'animate'
-    const activeClass = this.os.activeClass || 'animate-active'
+    const { animateClass, activeClass } = this.os
 
     const { top, bottom } = el.getBoundingClientRect()
     const height = document.documentElement.clientHeight
@@ -29,12 +31,12 @@ class Animate {
 }
 
 export default {
-  install (Vue, os = {}) {
-    let a = new Animate(os)
+  install (Vue, os) {
+    let a = new Animate()
 
     Vue.directive('animate', {
       bind (el, binding) {
-        el.classList.add(os.animateClass || 'animate')
+        el.classList.add(os.animateClass)
       },
       inserted (el, binding) {
         a.activate(el, binding)
