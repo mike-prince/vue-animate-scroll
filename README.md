@@ -33,17 +33,17 @@ Vue.use(VueAnimate)
 
 ```css
 .animate {
-  transition-delay: .1s
-  transition-duration: .25s
-  transition-timing-function: ease-in
+  transition-delay: .1s;
+  transition-duration: .25s;
+  transition-timing-function: ease-in;
 }
 
 .slide-up {
-  transform: translateY(0)
+  transform: translateY(0);
 }
 
 .slide-up.animate-active {
-  transform: translateY(-100px)
+  transform: translateY(-100px);
 }
 ```
 
